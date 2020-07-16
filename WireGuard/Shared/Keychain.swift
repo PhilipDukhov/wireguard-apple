@@ -43,10 +43,12 @@ class Keychain {
         items[kSecAttrSynchronizable as String] = false
         items[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
 
-        guard let extensionPath = Bundle.main.builtInPlugInsURL?.appendingPathComponent("WireGuardNetworkExtension.appex").path else {
-            wg_log(.error, staticMessage: "Unable to determine app extension path")
-            return nil
-        }
+        let extensionPath = Bundle.main.bundleURL
+            .appendingPathComponent("Contents")
+            .appendingPathComponent("Library")
+            .appendingPathComponent("SystemExtensions")
+            .appendingPathComponent("WireGuardNetworkExtension.systemextension")
+            .path
         var extensionApp: SecTrustedApplication?
         var mainApp: SecTrustedApplication?
         ret = SecTrustedApplicationCreateFromPath(extensionPath, &extensionApp)
