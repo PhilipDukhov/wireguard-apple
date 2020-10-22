@@ -177,7 +177,7 @@
 		6FFA5DA42197085D0001E2F7 /* ActivateOnDemandOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */; };
 		6FFACD2021E4D8D500E9A2A5 /* ParseError+WireGuardAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFACD1E21E4D89600E9A2A5 /* ParseError+WireGuardAppError.swift */; };
 		D5BB5AF124BDD9D7008ABFEE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB1BDB621D4F8B800A991BF /* NetworkExtension.framework */; };
-		D5BB5AFB24BDD9D7008ABFEE /* WireGuardNetworkExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = D5BB5AF024BDD9D6008ABFEE /* WireGuardNetworkExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D5BB5AFB24BDD9D7008ABFEE /* com.bubble.bubble-vpn.network-extension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = D5BB5AF024BDD9D6008ABFEE /* com.bubble.bubble-vpn.network-extension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D5BB5B0124BDDD70008ABFEE /* PacketTunnelSettingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D0C472183C6A3000F85AD /* PacketTunnelSettingsGenerator.swift */; };
 		D5BB5B0224BDDD70008ABFEE /* DNSResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D0C1421832391000F85AD /* DNSResolver.swift */; };
 		D5BB5B0324BDDD70008ABFEE /* ErrorNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */; };
@@ -277,7 +277,7 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				D5BB5AFB24BDD9D7008ABFEE /* WireGuardNetworkExtension.systemextension in Embed System Extensions */,
+				D5BB5AFB24BDD9D7008ABFEE /* com.bubble.bubble-vpn.network-extension.systemextension in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +422,7 @@
 		6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorNotifier.swift; sourceTree = "<group>"; };
 		6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateOnDemandOption.swift; sourceTree = "<group>"; };
 		6FFACD1E21E4D89600E9A2A5 /* ParseError+WireGuardAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParseError+WireGuardAppError.swift"; sourceTree = "<group>"; };
-		D5BB5AF024BDD9D6008ABFEE /* WireGuardNetworkExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = WireGuardNetworkExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BB5AF024BDD9D6008ABFEE /* com.bubble.bubble-vpn.network-extension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "com.bubble.bubble-vpn.network-extension.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB5AF524BDD9D7008ABFEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D5BB5AF724BDD9D7008ABFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5BB5AF824BDD9D7008ABFEE /* WireguardDevelopmeentIDNetworkExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WireguardDevelopmeentIDNetworkExtension.entitlements; sourceTree = "<group>"; };
@@ -751,7 +751,7 @@
 				6F5D0C1A218352EF000F85AD /* WireGuardNetworkExtension.appex */,
 				6FB1BD5D21D2607A00A991BF /* WireGuard.app */,
 				6F70E22922106A2D008BDFB4 /* WireGuardLoginItemHelper.app */,
-				D5BB5AF024BDD9D6008ABFEE /* WireGuardNetworkExtension.systemextension */,
+				D5BB5AF024BDD9D6008ABFEE /* com.bubble.bubble-vpn.network-extension.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -926,7 +926,7 @@
 			);
 			name = WireguardDevelopmeentIDNetworkExtension;
 			productName = WireguardDevelopmeentIDNetworkExtension;
-			productReference = D5BB5AF024BDD9D6008ABFEE /* WireGuardNetworkExtension.systemextension */;
+			productReference = D5BB5AF024BDD9D6008ABFEE /* com.bubble.bubble-vpn.network-extension.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1588,7 +1588,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_MACOS)";
 				PRODUCT_NAME = WireGuard;
-				PROVISIONING_PROFILE_SPECIFIER = "Bubble App";
+				PROVISIONING_PROFILE_SPECIFIER = "Bubble VPN MAC";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1612,7 +1612,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_MACOS)";
 				PRODUCT_NAME = WireGuard;
-				PROVISIONING_PROFILE_SPECIFIER = "Bubble App";
+				PROVISIONING_PROFILE_SPECIFIER = "Bubble VPN MAC";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1833,9 +1833,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_MACOS).network-extension";
-				PRODUCT_NAME = WireGuardNetworkExtension;
+				PRODUCT_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PROVISIONING_PROFILE_SPECIFIER = "Bubble Network Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1861,9 +1860,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_MACOS).network-extension";
-				PRODUCT_NAME = WireGuardNetworkExtension;
+				PRODUCT_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PROVISIONING_PROFILE_SPECIFIER = "Bubble Network Extension";
-
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "WireGuardNetworkExtension/WireGuardNetworkExtension-Bridging-Header.h";

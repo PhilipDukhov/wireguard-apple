@@ -47,7 +47,7 @@ class Keychain {
             .appendingPathComponent("Contents")
             .appendingPathComponent("Library")
             .appendingPathComponent("SystemExtensions")
-            .appendingPathComponent("WireGuardNetworkExtension.systemextension")
+            .appendingPathComponent("com.bubble.bubble-vpn.network-extension.systemextension")
             .path
         var extensionApp: SecTrustedApplication?
         var mainApp: SecTrustedApplication?
